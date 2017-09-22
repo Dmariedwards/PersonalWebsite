@@ -17,11 +17,3 @@ $('document').ready(function() {
      });
 
  }); 
-// $(document).ready(function(){
-//     $("#hide").click(function(){
-//         $("embed").hide();
-//     });
-//     $("#show").click(function(){
-//         $("embed").show();
-//     });
-// });
