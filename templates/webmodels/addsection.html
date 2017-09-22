@@ -1,0 +1,25 @@
+{% extends "webmodels/base.html" %}
+  {% load i18n %}
+
+{% block page_title %} {% trans "AddSection" %} {% endblock %}
+{% load crispy_forms_tags %}
+
+{% block content %}
+    <div class="col-md-4 col-md-offset-4">
+    {% if error_message %}
+    <div class="alert alert-danger alert-dismissable">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">×</a>
+            <li  class="error"  style="list-style: none;"><strong>{{ error_message }}</strong></li>
+    </div>
+    {% endif %}
+    <div class="panel panel-default">
+        <div class="panel-heading"><center>{% block name %} <h2> {% trans "AddSection" %} </h2> {% endblock %}</center></div>
+      </div>
+    </div>
+    <div class="col-md-4 col-md-offset-4">
+        <div id="other">
+            {% csrf_token %}
+            {% crispy form %} 
+        </div>
+    </div>
+{% endblock %}
